@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply bg-light text-dark;
+  }
+  h1 {
+    @apply text-3xl font-bold mb-6;
+  }
+  h2 {
+    @apply text-2xl font-bold mb-4;
+  }
+  h3 {
+    @apply text-xl font-bold mb-3;
+  }
+  p {
+    @apply mb-4;
+  }
+  a {
+    @apply text-primary hover:text-secondary transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center px-4 py-2 rounded-md text-white transition-all duration-200 ease-in-out;
+  }
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 focus:ring-2 focus:ring-primary/20;
+  }
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/90 focus:ring-2 focus:ring-secondary/20;
+  }
+  .btn-accent {
+    @apply bg-accent hover:bg-accent/90 focus:ring-2 focus:ring-accent/20;
+  }
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+  }
+}
+
+/* 自定义过渡效果 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s ease;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+/* ElementPlus样式自定义 */
+.el-button {
+  @apply font-medium;
+}
+
+.el-input__inner {
+  @apply focus:border-primary focus:ring-1 focus:ring-primary/20;
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  @apply bg-primary;
+}
+
+/* 文章内容样式 */
+.article-content {
+  @apply prose prose-lg max-w-none;
+}
+
+.article-content pre {
+  @apply rounded-lg p-4 overflow-auto;
+} 

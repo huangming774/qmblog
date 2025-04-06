@@ -1,0 +1,135 @@
+/* 主样式文件 */
+
+/* 全局样式 */
+:root {
+  --primary-color: #409eff;
+  --success-color: #67c23a;
+  --warning-color: #e6a23c;
+  --danger-color: #f56c6c;
+  --info-color: #909399;
+  --text-primary: #303133;
+  --text-regular: #606266;
+  --text-secondary: #909399;
+  --border-color: #dcdfe6;
+  --border-light: #e4e7ed;
+  --background-color: #f5f7fa;
+}
+
+/* 文章样式 */
+.article-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.article-cover {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.article-title {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.article-meta-item {
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.article-meta-item i {
+  margin-right: 4px;
+}
+
+.article-content {
+  line-height: 1.8;
+  color: var(--text-regular);
+  margin-bottom: 20px;
+}
+
+.article-tags {
+  margin-top: 20px;
+}
+
+/* 布局样式 */
+.page-container {
+  width: 100%;
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-title {
+  font-size: 24px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.page-description {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+/* 表单样式 */
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* 按钮样式 */
+.btn-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 10px;
+  }
+  
+  .article-title {
+    font-size: 1.5rem;
+  }
+  
+  .article-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .article-meta-item {
+    margin-bottom: 8px;
+  }
+} 
